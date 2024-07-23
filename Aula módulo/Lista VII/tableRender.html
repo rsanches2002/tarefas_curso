@@ -1,102 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>renderizando questionarios</title>
 </head>
-<body>
-    <div class="container"> </div> <br>
 
-    <script src="./main.js" type="module"> </script>
-    
+<body>
+    <div id="qdro_form">
+            <p>ESCOLHER QUESTIONÁRIO</p>
+            <div>
+                <label >Questionário: </label>
+                <input type="text" id="questionary" placeholder="">
+                <br>
+                <label >Id do respondente: </label>
+                <input type="text" id="respondenteID" placeholder="">
+                <br>
+                <button class="botao">Exibir questionário</button>
+                <br>
+                <button class="botaoExibir">Exibir respostas</button>
+            </div>
+    </div>
+
+    <br>
+    <div class="container"> </div>
+    <br>
+
+    <script src="./renderQuestionario.js" type="module"> </script>
+    <script src="./renderRespostas.js" type="module"> </script>
+    <!-- <script src="./pushRespostas.js" type="module"> </script> -->
+
     <style>
-        
-        .tabela
-        {
+        .tabela {
             width: 90%;
             height: 700px;
             font-size: 18px;
             display: flex;
-            justify-content:center;
-            text-align:center;
-            align-items:center;
-            vertical-align:top;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            vertical-align: top;
             flex-direction: column;
         }
 
-        .head{
+        .head {
             width: 600px;
             height: 65px;
             margin: none;
             padding: none;
             display: flex;
-            justify-content:center;
-            text-align:center;
-            align-items:center;
-            vertical-align:top;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            vertical-align: top;
         }
 
-        .row-head{
+        .row-head {
             width: 600px;
             height: 65px;
             margin: none;
             padding: none;
             display: flex;
-            justify-content:center;
-            text-align:center;
-            align-items:center;
-            vertical-align:top;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            vertical-align: top;
         }
 
-        .body{
+        .body {
             width: 600px;
             height: 570px;
             margin: none;
             padding: none;
             display: flex;
-            justify-content:start;
-            text-align:center;
-            align-items:center;
-            vertical-align:top;
+            justify-content: start;
+            text-align: center;
+            align-items: center;
+            vertical-align: top;
             flex-direction: column;
         }
 
-        .row-body{
+        .row-body {
             width: 600px;
             height: 64px;
             margin: none;
             padding: none;
             display: flex;
-            justify-content:center;
-            text-align:center;
-            align-items:center;
-            vertical-align:top;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            vertical-align: top;
         }
 
-        .tabela th{
+        .tabela th {
             border: 0.5px solid black;
             width: 125px;
             height: 65px;
             display: flex;
-            justify-content:center;
-            text-align:center;
-            align-items:center;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
         }
 
-        .tabela td{
+        .tabela td {
             border: 0.5px solid black;
             width: 125px;
             height: 60px;
             display: flex;
-            justify-content:center;
-            text-align:center;
-            align-items:center;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
             margin: none;
             padding: none;
         }
-        
     </style>
 
+
 </body>
-</html>
+

@@ -21,8 +21,8 @@ let dataBase =
                 },
                 {
                     description: "Qual a intensidade da sua fome pela manhã?",
-                    type: "close",
-                    answer: 0
+                    type: "open",
+                    answer: "testando resposta aberta"
                 }   
             ]
         },
@@ -35,8 +35,8 @@ let dataBase =
             questions: [
                 {
                     description: "Descreva a qualidade do seu sono:",
-                    answer: "testando resposta aberta",
                     type: "open",
+                    answer: "testando resposta aberta"
                 },
                 {
                     description: "O quanto você dorme?",

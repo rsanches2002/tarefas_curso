@@ -93,8 +93,6 @@ function mudarClaroEscuro_email (botao, emails)
                 tituloElement.setAttribute("class", "container-titulo claro");
                 tituloElement.textContent = "Título: " + emails[i].titulo;
             }
-            
-
             botao.value = 'Modo escuro';
             botao.innerHTML = 'Modo escuro'
         }
