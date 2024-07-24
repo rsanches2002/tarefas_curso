@@ -1,13 +1,27 @@
 import salvarRespostas from "./pushRespostas.js";
 
 function renderRespostas (dataBaseCopy, IDquest, IDrespond) {
-    var div = document.querySelector(".container");
-    for (var i=0;i<dataBaseCopy.length;i++){
-        if (dataBaseCopy.surveyId[i] == IDquest){
+
+    // for (let i=0;i<dataBaseCopy.length;i++){
+    //     if (dataBaseCopy[i].surveyId == IDquest.value){
+    //         for(let j=0; j<dataBaseCopy[i].questions.length; j++){
+    //             debugger
+    //             console.log(dataBaseCopy[i].questions[j].answers);
+    //         }
+    //     }
+    // }
+
+    for (let i=0;i<dataBaseCopy.length;i++){
+        if (dataBaseCopy[i].surveyId == IDquest.value){
             for(let j=0; j<dataBaseCopy[i].questions.length; j++){
-                console.log(dataBaseCopy[i].questions[j].answers);
+                for(let l=0; l<dataBaseCopy[i].questions[j].answers.length; l++){
+                    if (dataBaseCopy[i].questions[j].answers[l].InterviewdId == IDrespond.value){
+                        console.log(dataBaseCopy[i].questions[j].answers[l].answer);
+                    }
+                }
             }
         }
+        
     }
 }
 
