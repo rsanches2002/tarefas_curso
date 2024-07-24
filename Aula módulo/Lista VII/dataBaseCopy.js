@@ -20,7 +20,7 @@ let dataBaseCopy =
                             answer: 0
                         },
                         {
-                            InterviewdId: 4,
+                            InterviewdId: 1,
                             answer: 1
                         }
                     ]
@@ -42,7 +42,7 @@ let dataBaseCopy =
                     options: ["feminino", "masculino"],
                     answers: [
                         {
-                            InterviewdId: 3,
+                            InterviewdId: 1,
                             answer: 2
                         }
                     ]

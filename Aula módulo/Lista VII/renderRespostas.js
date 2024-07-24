@@ -5,24 +5,41 @@ function renderRespostas (dataBaseCopy, IDquest, IDrespond) {
     // for (let i=0;i<dataBaseCopy.length;i++){
     //     if (dataBaseCopy[i].surveyId == IDquest.value){
     //         for(let j=0; j<dataBaseCopy[i].questions.length; j++){
-    //             debugger
-    //             console.log(dataBaseCopy[i].questions[j].answers);
+    //             for(let l=0; l<dataBaseCopy[i].questions[j].answers.length; l++){
+    //                 if (dataBaseCopy[i].questions[j].answers[l].InterviewdId == IDrespond.value){
+    //                     console.log(dataBaseCopy[i].questions[j].answers[l].answer);
+    //                 }
+    //             }
     //         }
     //     }
     // }
-
+    let aswe = document.querySelector(".container");
+    aswe.innerHTML += `<div class="aswers">`
     for (let i=0;i<dataBaseCopy.length;i++){
         if (dataBaseCopy[i].surveyId == IDquest.value){
             for(let j=0; j<dataBaseCopy[i].questions.length; j++){
+
+                aswe.innerHTML += `
+                <div class="CustonAnswer">
+                Questão: ${dataBaseCopy[i].questions[j]} <br>
+                </div>
+                `;
                 for(let l=0; l<dataBaseCopy[i].questions[j].answers.length; l++){
                     if (dataBaseCopy[i].questions[j].answers[l].InterviewdId == IDrespond.value){
-                        console.log(dataBaseCopy[i].questions[j].answers[l].answer);
+                        aswe.innerHTML += `
+                        <div class="CustonAnswer">
+                        Entrevistado: ${IDrespond.value} <br>
+                        Questionário: ${IDquest.value} <br>
+                        Resposta: ${dataBaseCopy[i].questions[j].answers[l].answer} 
+                        </div>
+                        `;
                     }
                 }
             }
         }
-        
+    aswe.innerHTML += `</div>`;
     }
+    return aswe;
 }
 
 export default renderRespostas;
