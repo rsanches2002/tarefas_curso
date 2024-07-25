@@ -19,13 +19,12 @@ function renderRespostas (dataBaseCopy, IDquest, IDrespond) {
         if (dataBaseCopy[i].surveyId == IDquest.value){
             for(let j=0; j<dataBaseCopy[i].questions.length; j++){
                 for(let l=0; l<dataBaseCopy[i].questions[j].answers.length; l++){
+                    debugger
                     if (dataBaseCopy[i].questions[j].answers[l].InterviewdId == IDrespond.value){
-                        console.log(dataBaseCopy[i].questions[j].answers[l])
                         aswe.innerHTML += `
                         <div class="CustonAnswer">
                         Entrevistado: ${IDrespond.value} <br>
                         Questionário: ${IDquest.value} <br>
-                        Questão: ${dataBaseCopy[i].questions[j].answers} <br>
                         Resposta: ${dataBaseCopy[i].questions[j].answers[l].answer} <br>
                         </div>
                         `;
