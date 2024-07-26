@@ -43,7 +43,7 @@ let dataBaseCopy =
                     answers: [
                         {
                             InterviewdId: 1,
-                            answer: 2
+                            answer: 1
                         }
                     ]
                 }   

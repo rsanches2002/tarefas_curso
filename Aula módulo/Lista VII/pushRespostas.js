@@ -15,9 +15,9 @@ function salvarRespostas (idQuestionario, idRespondente, dataBaseCopy){
 
     for (let i=0; i<valoresSelecionados.length;i++){
       let novaResposta = {
-        interviewdId: idRespondente,
-        //answer:Number(valoresSelecionados[i])
-        answer: valoresSelecionados[i]
+        InterviewdId: Number(idRespondente),
+        answer:Number(valoresSelecionados[i])
+        //como salvar as abertas?
       }
       novasRespostas.push(novaResposta);
     }
@@ -39,3 +39,4 @@ function salvarRespostas (idQuestionario, idRespondente, dataBaseCopy){
 
 export default salvarRespostas;
 
+//1 - salvar respostas abertas
